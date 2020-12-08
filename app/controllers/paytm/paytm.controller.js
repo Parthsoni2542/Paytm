@@ -14,7 +14,7 @@ module.exports = {
                 paramarray[name] = paramlist[name];
             }
         }
-        paramarray["CALLBACK_URL"] = "http://192.168.29.47:3001/api/paytm/response";
+        paramarray["CALLBACK_URL"] = "http://paytm-payment.cloudjiffy.net/api/paytm/response";
         checksum.genchecksum(paramarray, PAYTM_MERCHANT_KEY, (err, result) => {
             if (err) throw err;
             res.render("paytm/request", { result });
